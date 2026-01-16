@@ -1,0 +1,188 @@
+
+/* Loading states */
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primary-blue);
+}
+
+.dashboard-loading .diamond-shape {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, var(--accent-cyan), var(--diamond-glow));
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  animation: diamondGlow 2s ease-in-out infinite alternate;
+  margin-bottom: 2rem;
+}
+
+.dashboard-loading p {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+.balance-cards.loading,
+.transactions-loading,
+.nft-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: var(--text-muted);
+  background: rgba(26, 43, 74, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+}
+
+/* Additional dashboard styles */
+.welcome-text {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quick-actions {
+  background: rgba(26, 43, 74, 0.8);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  margin-top: 2rem;
+}
+
+.quick-actions h3 {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.action-btn {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.action-btn:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.wallet-reminder {
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 136, 255, 0.1));
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+.reminder-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.reminder-icon {
+  font-size: 2rem;
+}
+
+.reminder-content h4 {
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.reminder-content p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+/* Services Section */
+.services-section {
+  margin-top: 2rem;
+}
+
+.services-section h3 {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.service-card {
+  background: rgba(26, 43, 74, 0.8);
+  border-radius: 15px;
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.service-icon {
+  font-size: 1.8rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+.service-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.service-info p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
